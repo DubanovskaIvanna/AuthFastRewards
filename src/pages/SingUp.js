@@ -1,21 +1,20 @@
-
 import React, { useCallback } from "react";
-import { withRouter } from "react-router";
-import app from "./base.js";
+import { Link } from "react-router-dom";
 
-const SignUp = ({ history }) => {
-  const handleSignUp = useCallback(async event => {
+import backendService from "service/backend";
+
+const SignUp = () => {
+  const handleSignUp = useCallback(async (event) => {
     event.preventDefault();
     const { email, password } = event.target.elements;
     try {
-      await app
+      await backendService
         .auth()
         .createUserWithEmailAndPassword(email.value, password.value);
-      history.push("/");
     } catch (error) {
       alert(error);
     }
-  }, [history]);
+  }, []);
 
   return (
     <div>
@@ -31,8 +30,9 @@ const SignUp = ({ history }) => {
         </label>
         <button type="submit">Sign Up</button>
       </form>
+      <Link to="/login">go to login</Link>
     </div>
   );
 };
 
-export default withRouter(SignUp);
+export default SignUp;

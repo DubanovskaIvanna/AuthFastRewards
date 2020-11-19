@@ -1,34 +1,23 @@
 import React from "react";
+import { BrowserRouter as Router } from "react-router-dom";
+
+import { AuthProvider } from "components/Auth";
+import PrivateRoute from "components/PrivateRoute";
+import PublicRoute from "components/PublicRoute";
+
+import Home from "pages/Home";
+import Login from "pages/Login";
+import SingUp from "pages/SingUp";
+
 import "./App.css";
-import {
-  BrowserRouter as Router,
-  Route,
-} from "react-router-dom";
-
-import Home from "./components/Home.js";
-import Login from "./components/Login.js";
-import SingUp from "./components/SingUp.js";
-import { AuthProvider } from "./components/Auth.js";
-import PrivateRoute from "./components/PrivateRoute.js";
-
 
 function App() {
-  
   return (
     <AuthProvider>
       <Router>
-        <div className="App">
-          <PrivateRoute exact path="/" component={Home}/>
-          {/* <Route  path ="/" exact component={Home}></Route> */}
-          <Route  path ="/Login.js" component={Login}></Route>
-          <Route  path ="/SingUp.js" component={SingUp}></Route>
-          {/* <header className="App-header">
-          <section>?{user ? <TrackTime/>:<SingIn/>}
-          </section>
-          <p>Let's Add Routing</p>
-          </header> */}
-        </div>
-        
+        <PrivateRoute exact path="/" component={Home} />
+        <PublicRoute path="/login" component={Login} />
+        <PublicRoute path="/signup" component={SingUp} />
       </Router>
     </AuthProvider>
   );
