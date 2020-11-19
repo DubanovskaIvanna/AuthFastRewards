@@ -1,11 +1,11 @@
 import React, { useEffect, useState} from "react";
-import app from '../App.js';
+import app from './base.js';
 
 export const AuthContext = React.createContext ();
 
 export const AuthProvider = ({children}) => {
     const [currentUser, setCurrentUser] = useState(null);
-    const [pending, setPending] = useState(true);
+    // const [pending, setPending] = useState(true);
   
     useEffect(() => {
       app.auth().onAuthStateChanged(setCurrentUser); 
