@@ -3,20 +3,20 @@ import { Route, Redirect } from "react-router-dom";
 
 import { AuthContext } from "./Auth";
 
-const PrivateRoute = ({ component: RouterComponent, ...rest }) => {
+const PublicRoute = ({ component: RouterComponent, ...rest }) => {
   const { currentUser } = useContext(AuthContext);
   return (
     <Route
       {...rest}
       render={(routeProps) =>
-        currentUser ? (
+        !currentUser ? (
           <RouterComponent {...routeProps} />
         ) : (
-          <Redirect to={"/login"} />
+          <Redirect to={"/"} />
         )
       }
     />
   );
 };
 
-export default PrivateRoute;
+export default PublicRoute;
