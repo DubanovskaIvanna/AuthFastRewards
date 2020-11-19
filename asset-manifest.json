@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.css": "/DubanovskaIvanna/AuthFastRewards.git/static/css/main.52976b2a.chunk.css",
-    "main.js": "/DubanovskaIvanna/AuthFastRewards.git/static/js/main.1f536fc4.chunk.js",
-    "main.js.map": "/DubanovskaIvanna/AuthFastRewards.git/static/js/main.1f536fc4.chunk.js.map",
-    "runtime-main.js": "/DubanovskaIvanna/AuthFastRewards.git/static/js/runtime-main.93fee675.js",
-    "runtime-main.js.map": "/DubanovskaIvanna/AuthFastRewards.git/static/js/runtime-main.93fee675.js.map",
-    "static/js/2.e3d54615.chunk.js": "/DubanovskaIvanna/AuthFastRewards.git/static/js/2.e3d54615.chunk.js",
-    "static/js/2.e3d54615.chunk.js.map": "/DubanovskaIvanna/AuthFastRewards.git/static/js/2.e3d54615.chunk.js.map",
-    "index.html": "/DubanovskaIvanna/AuthFastRewards.git/index.html",
-    "static/css/main.52976b2a.chunk.css.map": "/DubanovskaIvanna/AuthFastRewards.git/static/css/main.52976b2a.chunk.css.map",
-    "static/js/2.e3d54615.chunk.js.LICENSE.txt": "/DubanovskaIvanna/AuthFastRewards.git/static/js/2.e3d54615.chunk.js.LICENSE.txt"
+    "main.css": "/DubanovskaIvanna/AuthFastRewards/static/css/main.52976b2a.chunk.css",
+    "main.js": "/DubanovskaIvanna/AuthFastRewards/static/js/main.5f94c14b.chunk.js",
+    "main.js.map": "/DubanovskaIvanna/AuthFastRewards/static/js/main.5f94c14b.chunk.js.map",
+    "runtime-main.js": "/DubanovskaIvanna/AuthFastRewards/static/js/runtime-main.2e6b833d.js",
+    "runtime-main.js.map": "/DubanovskaIvanna/AuthFastRewards/static/js/runtime-main.2e6b833d.js.map",
+    "static/js/2.c89d4dfe.chunk.js": "/DubanovskaIvanna/AuthFastRewards/static/js/2.c89d4dfe.chunk.js",
+    "static/js/2.c89d4dfe.chunk.js.map": "/DubanovskaIvanna/AuthFastRewards/static/js/2.c89d4dfe.chunk.js.map",
+    "index.html": "/DubanovskaIvanna/AuthFastRewards/index.html",
+    "static/css/main.52976b2a.chunk.css.map": "/DubanovskaIvanna/AuthFastRewards/static/css/main.52976b2a.chunk.css.map",
+    "static/js/2.c89d4dfe.chunk.js.LICENSE.txt": "/DubanovskaIvanna/AuthFastRewards/static/js/2.c89d4dfe.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.93fee675.js",
-    "static/js/2.e3d54615.chunk.js",
+    "static/js/runtime-main.2e6b833d.js",
+    "static/js/2.c89d4dfe.chunk.js",
     "static/css/main.52976b2a.chunk.css",
-    "static/js/main.1f536fc4.chunk.js"
+    "static/js/main.5f94c14b.chunk.js"
   ]
 }
