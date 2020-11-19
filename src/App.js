@@ -1,9 +1,19 @@
+import React from "react";
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from "react-router-dom";
+
+import Home from "./components/Home.js";
+import Login from "./components/Login.js";
+import Registration from "./components/Registration.js";
 import firebase from 'firebase/app';
 import 'firebase/firestore';
 import 'firebase/auth';
-
-// import { useAuth } from "./use-auth.js";
 import { useAuthState } from 'react-firebase-hooks/auth';
+// import React, { useAuthState } from 'react';
 import { usecollectionData } from 'react-firebase-hooks/firestore';
 
 firebase.initializeApp({
@@ -19,52 +29,53 @@ firebase.initializeApp({
 })
 
 
-var auth = firebase.auth();
+// var auth = firebase.auth();
 // const [user] =useAuthState(auth);
 
-const firestore = firebase.firestore();
-useAuthState(
-  () => {
-    const user = auth.onAuthStateChanged(setValue, setError);
+// function Example() {
+//   const [user] = useAuhtState(auth);
+//   return console.log('Yes');
+// }
 
-    return () => {
-      user();
-    };
-  },
-  [auth]
-);
+// const firestore = firebase.firestore();
 
 function App() {
   
   return (
-    <div className="App">
-      <header className="App-header">
-      <section>?{user ? <TrackTime/>:<SingIn/>}
-      </section>
-      </header>
-    </div>
+    <Router>
+      <div className="App">
+        <header className="App-header">
+        {/* <section>?{user ? <TrackTime/>:<SingIn/>} */}
+        {/* </section> */}
+        <p>Let's Add Routing</p>
+        </header>
+      </div>
+      <Route  path ="/" exact component={Home}></Route>
+      <Route  path ="/Login.js" component={Login}></Route>
+      <Route  path ="/Registration.js" component={Registration}></Route>
+    </Router>
   );
 }
 
-function SingIn(){
-  const singInWithGoogle = () => {
-    const provider= new firebase.auth.GoogleAuthProvider();
-    auth.signInWithPopup(provider);
-  }
-  return  (
-    <button onClick={singInWithGoogle}>Sign in with Google</button>
-  )
-}
+// function SingIn(){
+//   const singInWithGoogle = () => {
+//     const provider= new firebase.auth.GoogleAuthProvider();
+//     auth.signInWithPopup(provider);
+//   }
+//   return  (
+//     <button onClick={singInWithGoogle}>Sign in with Google</button>
+//   )
+// }
 
-function SingOut (){
-  return auth.currentUser && (
+// function SingOut (){
+//   return auth.currentUser && (
 
-    <button onClick ={() =>auth.singOut()}>Sing Out</button>
-  )
-}
+//     <button onClick ={() =>auth.singOut()}>Sing Out</button>
+//   )
+// }
 
-function TrackTime(){
-  return console.log('Yes');
-};
+// function TrackTime(){
+//   return console.log('Yes');
+// };
 
 export default App;
