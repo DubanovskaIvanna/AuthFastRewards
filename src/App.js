@@ -1,6 +1,6 @@
 import firebase from 'firebase/app';
 import 'firebase/firestore';
-import 'firebase/auth'
+import 'firebase/auth';
 
 // import { useAuth } from "./use-auth.js";
 import { useAuthState } from 'react-firebase-hooks/auth';
@@ -20,13 +20,19 @@ firebase.initializeApp({
 
 
 var auth = firebase.auth();
-const [user] =useAuthState(auth);
-// const authContext = createContext();
-// export const useAuthState = () => {
-//   return useContext(authContext);
-// };
+// const [user] =useAuthState(auth);
 
 const firestore = firebase.firestore();
+useAuthState(
+  () => {
+    const user = auth.onAuthStateChanged(setValue, setError);
+
+    return () => {
+      user();
+    };
+  },
+  [auth]
+);
 
 function App() {
   
