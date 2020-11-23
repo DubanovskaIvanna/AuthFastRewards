@@ -3,6 +3,8 @@ import { Link } from "react-router-dom";
 
 import backendService from "service/backend";
 
+import "../App.css";
+
 const Login = () => {
   const handleLogin = useCallback(async (event) => {
     event.preventDefault();
@@ -17,20 +19,20 @@ const Login = () => {
   }, []);
 
   return (
-    <div>
-      <h1>Log in</h1>
-      <form onSubmit={handleLogin}>
-        <label>
+    <div className="loginform">
+      <h1 className="h1l">Login</h1>
+      <form  onSubmit={handleLogin}>
+        <label className="labl1">
           Email
-          <input name="email" type="email" placeholder="Email" />
+          <input  className="inpl1" name="email" type="email" placeholder="Email" />
         </label>
-        <label>
+        <label className="labl2">
           Password
-          <input name="password" type="password" placeholder="Password" />
+          <input className="inpl2" name="password" type="password" placeholder="Password" />
         </label>
-        <button type="submit">Log in</button>
+        <button className="btnl" type="submit">Log in</button>
       </form>
-      <Link to="/signup">create account</Link>
+      <Link className="linkl" to="/signup">create account</Link>
     </div>
   );
 };

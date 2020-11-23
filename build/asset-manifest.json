@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/DubanovskaIvanna/AuthFastRewards/static/css/main.ff9a4663.chunk.css",
+    "main.js": "/DubanovskaIvanna/AuthFastRewards/static/js/main.fc81ba50.chunk.js",
+    "main.js.map": "/DubanovskaIvanna/AuthFastRewards/static/js/main.fc81ba50.chunk.js.map",
+    "runtime-main.js": "/DubanovskaIvanna/AuthFastRewards/static/js/runtime-main.2e6b833d.js",
+    "runtime-main.js.map": "/DubanovskaIvanna/AuthFastRewards/static/js/runtime-main.2e6b833d.js.map",
+    "static/js/2.758df8e0.chunk.js": "/DubanovskaIvanna/AuthFastRewards/static/js/2.758df8e0.chunk.js",
+    "static/js/2.758df8e0.chunk.js.map": "/DubanovskaIvanna/AuthFastRewards/static/js/2.758df8e0.chunk.js.map",
+    "index.html": "/DubanovskaIvanna/AuthFastRewards/index.html",
+    "static/css/main.ff9a4663.chunk.css.map": "/DubanovskaIvanna/AuthFastRewards/static/css/main.ff9a4663.chunk.css.map",
+    "static/js/2.758df8e0.chunk.js.LICENSE.txt": "/DubanovskaIvanna/AuthFastRewards/static/js/2.758df8e0.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.2e6b833d.js",
+    "static/js/2.758df8e0.chunk.js",
+    "static/css/main.ff9a4663.chunk.css",
+    "static/js/main.fc81ba50.chunk.js"
+  ]
+}
